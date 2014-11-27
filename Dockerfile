@@ -15,6 +15,8 @@ RUN curl \
 
 ENV JAVA_HOME /usr/jdk1.8.0_25
 
+RUN rm -rf $JAVA_HOME/src.zip $JAVA_HOME/javafx-src.zip $JAVA_HOME/man
+
 ENV PATH ${PATH}:${JAVA_HOME}/bin
 
 ENTRYPOINT [ "java" ]
