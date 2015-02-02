@@ -1,9 +1,9 @@
 FROM        progrium/busybox 
-MAINTAINER  Ilya Dmitrichenko <errordeveloper@gmail.com>
+MAINTAINER  Yun Zhi Lin <yun@trunkplatform.com>
 
 RUN opkg-install curl ca-certificates
 
-ENV JAVA_HOME /usr/jdk1.8.0_25
+ENV JAVA_HOME /usr/jdk1.8.0_31
 
 RUN curl \
   --silent \
@@ -11,7 +11,7 @@ RUN curl \
   --retry 3 \
   --cacert /etc/ssl/certs/GeoTrust_Global_CA.crt \
   --header "Cookie: oraclelicense=accept-securebackup-cookie;" \
-  "http://download.oracle.com/otn-pub/java/jdk/8u25-b17/server-jre-8u25-linux-x64.tar.gz" \
+  "http://download.oracle.com/otn-pub/java/jdk/8u31-b13/server-jre-8u31-linux-x64.tar.gz" \
     | gunzip \
     | tar x -C /usr/ \
     && ln -s $JAVA_HOME /usr/java \
