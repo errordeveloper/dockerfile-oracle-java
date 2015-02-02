@@ -1,5 +1,5 @@
 FROM        progrium/busybox 
-MAINTAINER  Ilya Dmitrichenko <errordeveloper@gmail.com>
+MAINTAINER  Yun Zhi Lin <yun@trunkplatform.com>
 
 RUN opkg-install curl ca-certificates
 
